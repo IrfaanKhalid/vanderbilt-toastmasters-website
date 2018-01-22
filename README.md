@@ -17,6 +17,13 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# full deployment steps
+$ yarn install
+$ yarn run generate
+$ git add . # dist/ is what matters
+$ git commit -m 'INSERT COMMIT MESSAGE HERE'
+$ git push
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
