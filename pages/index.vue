@@ -1,35 +1,25 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <img src = "../static/logo-orig.jpg" class="logo">
       <h1 class="title">
-        vanderbilt-toastmasters-website
+        Welcome to Vanderbilt Toastmasters!
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        We meet at 6pm on the 2nd and 4th Wednesday of every month in Buttrick Hall 301.
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppLogo from "~/components/AppLogo.vue";
 
 export default {
   components: {
     AppLogo
   }
-}
+};
 </script>
 
 <style>
@@ -39,26 +29,34 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #866d4b;
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: Roboto, "Quicksand", "Source Sans Pro", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-weight: 330;
+  font-size: 5em;
+  color: black;
   letter-spacing: 1px;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-weight: 330;
+  font-size: 2em;
+  color: black;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
 
 .links {
   padding-top: 15px;
+}
+
+.logo {
+  border-radius : 50%;
+  width: 40vh;
+  height: 40vh;
 }
 </style>
