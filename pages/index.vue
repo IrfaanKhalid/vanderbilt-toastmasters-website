@@ -1,22 +1,10 @@
 <template>
   <section class="container">
-    <div class="page">
-      <img src="../static/logo-orig.jpg" class="logo">
-      <h1 class="title">
-        Welcome to Vanderbilt Toastmasters!
-      </h1>
-      <h2 class="subtitle">
-        We meet at 6pm on the 2nd and 4th Wednesday of every month in Buttrick Hall 301.
-      </h2>
-    </div>
-    <div class="page">
-      <img src="../static/logo-orig.jpg" class="logo">
-      <h1 class="title">
-        Welcome to Vanderbilt Toastmasters!
-      </h1>
-      <h2 class="subtitle">
-        We meet at 6pm on the 2nd and 4th Wednesday of every month in Buttrick Hall 301.
-      </h2>
+    <div class="home">
+      <img src="../static/vt-logo.svg" class="logo">
+      <p class="title">
+        Where leaders are made.
+      </p>
     </div>
   </section>
 </template>
@@ -39,12 +27,20 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: white;
+}
+
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
 }
 
 .page {
   min-height: 100vh;
-  display: flex;
+  display: grid;
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center;
@@ -56,7 +52,7 @@ export default {
   /* 1 */
   display: block;
   font-weight: 330;
-  font-size: 5em;
+  font-size: 3em;
   color: black;
   letter-spacing: 1px;
 }
@@ -67,6 +63,7 @@ export default {
   color: black;
   word-spacing: 5px;
   padding-bottom: 15px;
+  grid-column: 3 / 4;
 }
 
 .links {
@@ -74,9 +71,28 @@ export default {
 }
 
 .logo {
-  border-radius: 50%;
   width: 40vh;
   height: 40vh;
   align-self: center;
+  animation: turn 2s linear forwards 1s;
+  grid-column: 2 / 3;
+}
+
+@keyframes turn {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes godown {
+  100% {
+    top: 180px;
+  }
+}
+
+@keyframes goright {
+  100% {
+    left: 70px;
+  }
 }
 </style>
