@@ -55,28 +55,26 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "statement img" "description img";
   justify-content: center;
   align-items: center;
   background-color: #d8ab4c;
 }
 
 .mission-statement {
-  grid-row: 1;
-  grid-column: 1 / 1;
+  grid-area: statement;
 }
 
 .mission-description {
-  grid-row: 2;
-  grid-column: 1 / 1;
+  grid-area: description;
 }
 
 .title {
   font-family: Roboto, "Quicksand", "Source Sans Pro", -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   /* 1 */
-  display: block;
   font-weight: 330;
   font-size: 3em;
   color: black;
@@ -89,7 +87,6 @@ body {
   color: black;
   word-spacing: 5px;
   padding-bottom: 15px;
-  grid-column: 3 / 4;
 }
 
 .links {
