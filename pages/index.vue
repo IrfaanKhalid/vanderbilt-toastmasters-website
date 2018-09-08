@@ -1,7 +1,16 @@
 <template>
   <section class="container">
-    <div>
-      <img src = "../static/logo-orig.jpg" class="logo">
+    <div class="page">
+      <img src="../static/logo-orig.jpg" class="logo">
+      <h1 class="title">
+        Welcome to Vanderbilt Toastmasters!
+      </h1>
+      <h2 class="subtitle">
+        We meet at 6pm on the 2nd and 4th Wednesday of every month in Buttrick Hall 301.
+      </h2>
+    </div>
+    <div class="page">
+      <img src="../static/logo-orig.jpg" class="logo">
       <h1 class="title">
         Welcome to Vanderbilt Toastmasters!
       </h1>
@@ -26,15 +35,25 @@ export default {
 .container {
   min-height: 100vh;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #866d4b;
+  background-color: whitesmoke;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .title {
   font-family: Roboto, "Quicksand", "Source Sans Pro", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* 1 */
+    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  /* 1 */
   display: block;
   font-weight: 330;
   font-size: 5em;
@@ -55,8 +74,9 @@ export default {
 }
 
 .logo {
-  border-radius : 50%;
+  border-radius: 50%;
   width: 40vh;
   height: 40vh;
+  align-self: center;
 }
 </style>
