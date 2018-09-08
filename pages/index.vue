@@ -3,8 +3,16 @@
     <div class="home">
       <img src="../static/vt-logo.svg" class="logo">
       <p class="title">
-        Where leaders are made.
+        We empower communicators.
       </p>
+    </div>
+    <div class="mission">
+      <div class="mission-statement title">
+        aksdfjdsljf
+      </div>
+      <div class="mission-description subtitle">
+        kjadsfkljs
+      </div>
     </div>
   </section>
 </template>
@@ -20,6 +28,11 @@ export default {
 </script>
 
 <style>
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -38,12 +51,25 @@ export default {
   align-items: center;
 }
 
-.page {
+.mission {
   min-height: 100vh;
+  min-width: 100vw;
   display: grid;
-  flex-flow: column nowrap;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  background-color: #d8ab4c;
+}
+
+.mission-statement {
+  grid-row: 1;
+  grid-column: 1 / 1;
+}
+
+.mission-description {
+  grid-row: 2;
+  grid-column: 1 / 1;
 }
 
 .title {
