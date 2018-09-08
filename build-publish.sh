@@ -2,7 +2,7 @@
 yarn run generate
 
 # Copy static assets
-cp static/favicon.ico dist/
+cp static/* dist/
 
 # Push for deployment
 git add -A
