@@ -6,23 +6,18 @@
         We empower communicators.
       </p>
     </div>
-    <div class="mission">
-      <div class="mission-statement title">
-        aksdfjdsljf
-      </div>
-      <div class="mission-description subtitle">
-        kjadsfkljs
-      </div>
-    </div>
+    <Mission></Mission>
   </section>
 </template>
 
 <script>
 import AppLogo from "~/components/AppLogo.vue";
+import Mission from "~/components/Mission.vue";
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    Mission
   }
 };
 </script>
