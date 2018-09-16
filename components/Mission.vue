@@ -2,11 +2,12 @@
   <section class="container">
     <div class="mission">
       <div class="mission-statement title">
-        To craft our members' communication and leadership skills in a mutually supportive and positive learning environment.
+        Mission statement
       </div>
       <div class="mission-description subtitle">
-        Via regular meetings and external mentorship, our members strive to grow every day as leaders and communicators.
+        Mission description
       </div>
+      <img class="mission-img" src="../static/mission.png" />
     </div>
   </section>
 </template>
@@ -17,19 +18,21 @@
   max-height: 100vh;
   min-width: 100vw;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "statement img" "description img";
-  justify-content: center;
-  align-items: center;
   background-color: #d8ab4c;
 }
 
 .mission-statement {
   grid-area: statement;
-  box-shadow: 5px 5px 5px black;
-  min-height: 50vh;
   justify-content: center;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  filter: drop-shadow(5px 5px 10px black);
 }
 
 .mission-description {
@@ -38,6 +41,11 @@
   text-align: center;
   margin-left: 5vw;
   margin-right: 5vw;
+}
+
+.mission-img {
+  grid-area: img;
+  image-rendering: crisp-edges;
 }
 
 .title {
