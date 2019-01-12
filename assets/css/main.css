@@ -1,5 +1,53 @@
 @import url(font-awesome.min.css);
 
+:root {
+	--tm-darker-blue: #00284C;
+	--tm-dark-blue: #004165;
+	--tm-stone-blue: #A9B2B1;
+	--tm-yellow: #F2DF74;
+	--tm-dark-red: #772432;
+	--tm-vivid-red: #CD202C;
+	--dark-text-color: hsla(200,0%,0%,.7);
+	--darker-text-color: hsla(200,0%,0%,.7);
+	--transparent-white-color: rgba(255, 255, 255, 0.15);
+
+/* Original Colors */
+/* 
+	--default-pink: #b74e91;
+	--default-purple: #5e42a6;
+	--default-blue: #5052b5;
+	--default-dark-purple: #312450;
+
+
+	--sidebar-color: var(--default-dark-purple);
+	--gradient-left: var(--default-purple);
+	--gradient-right: var(--default-pink);
+	--header-bg: var(--default-purple);
+	--style1-bg: var(--default-purple);
+	--style2-bg: var(--default-blue);
+	--style3-bg: var(--default-pink);
+	--header-text-color: white;
+	--body-text-color: white;
+	--button-color: var(--body-text-color);
+	--button-border-color: var(--transparent-white-color);
+ */
+
+/* TM Colors */
+
+	--sidebar-color: var(--tm-darker-blue);
+	--gradient-left: var(--tm-dark-blue);
+	--gradient-right: var(--tm-stone-blue);
+	--style1-bg: var(--tm-dark-blue);
+	--style2-bg: var(--tm-dark-red);
+	--style3-bg: var(--tm-yellow);
+	--style3-text: var(--dark-text-color);
+	--header-text-color: white;
+	--body-text-color: white;
+	--button-color: var(--body-text-color);
+	--button-border-color: var(--transparent-white-color);
+	
+}
+
 /*
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -98,7 +146,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: var(--tm-stone-blue);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -115,7 +163,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
+		color: var(--body-text-color);
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -162,7 +210,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: var(--header-text-color);
 		font-weight: bold;
 	}
 
@@ -175,7 +223,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: var(--header-text-color);
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -1833,9 +1881,9 @@ input, select, textarea {
 		transition: border-color 0.2s ease;
 		background-color: transparent;
 		border: solid 1px !important;
-		border-color: rgba(255, 255, 255, 0.15) !important;
+		border-color: var(--button-border-color) !important;
 		border-radius: 3em;
-		color: #ffffff !important;
+		color: var(--button-color) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -2295,7 +2343,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color: var(--button-color);
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -3226,7 +3274,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: var(--style1-bg);
 		}
 
 		.wrapper.style1-alt {
@@ -3234,7 +3282,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #5052b5;
+			background-color: var(--style2-bg);
 		}
 
 		.wrapper.style2-alt {
@@ -3242,7 +3290,30 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: var(--style3-bg);
+			color: var(--style3-text);
+		}
+
+		.wrapper.style3 {
+			color: var(--style3-text) !important;
+		}
+
+		.wrapper.style3 h2 {
+			color: var(--style3-text) !important;
+		}
+
+		.wrapper.style3 h3 {
+			color: var(--style3-text) !important;
+		}
+
+		.wrapper.style3 b {
+			color: var(--style3-text) !important;
+		}
+
+		.wrapper.style3 > .inner > .button {
+			border-color: var(--dark-text-color) !important;
+			color: var(--dark-text-color) !important;
+			text-align: center;
 		}
 
 		.wrapper.style3-alt {
@@ -3353,7 +3424,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: var(--header-bg);
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3507,7 +3578,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		background: var(--sidebar-color);
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3748,10 +3819,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, var(--gradient-left), var(--gradient-right));
+				background-image: -webkit-linear-gradient(to right, var(--gradient-left), var(--gradient-right));
+				background-image: -ms-linear-gradient(to right, var(--gradient-left), var(--gradient-right));
+				background-image: linear-gradient(to right, var(--gradient-left), var(--gradient-right));
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
