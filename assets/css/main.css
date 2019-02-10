@@ -3240,11 +3240,14 @@ input, select, textarea {
 
 	.wrapper {
 		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
 	}
 
 		.wrapper > .inner {
 			padding: 5em 5em 3em 5em ;
 			max-width: 100%;
+			align-self: center;
 			width: 75em;
 		}
 
